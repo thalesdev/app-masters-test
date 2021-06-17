@@ -4,10 +4,11 @@ function removeHTMLTags(text: string) {
 	return text.replace(/(<([^>]+)>)/gm, '')
 }
 
-export function compare(textA: ChallengeEntry, textB: string) {
+export function compare(textA: ChallengeEntry, textB: string, asCode?: boolean) {
 	const pattern = /(\r\n|\n|\r)/gm;
 	const goal = typeof textA === "string" ? textA : textA.content;
-	return removeHTMLTags(goal).replace(pattern, '') === removeHTMLTags(textB).replace(pattern, '')
+	const source = text => asCode ? text : removeHTMLTags(text)
+	return source(goal).replace(pattern, '') === source(textB).replace(pattern, '')
 }
 
 export function evalGrossWPM(text: string, timeInMinutes: number) {

@@ -13,12 +13,11 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 		const wpm = String(query.wpm)
 		const time = String(query.time)
 
-		if (!wpm || time) {
+		if (!wpm || !time) {
 			throw new Error('Bad Request');
 		}
 
 		const html = generateCertificationHTML(wpm, time)
-
 		if (isHtmlDebug) {
 			res.setHeader('Content-Type', 'text/html')
 			res.end(html)
@@ -38,6 +37,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
 		res.end(file)
 	} catch (e) {
+
 		res.statusCode = 500
 		res.setHeader('Content-Type', 'text/html')
 		res.end('<h1>Internal Error</h1><p>Sorry, there was a problem</p>')

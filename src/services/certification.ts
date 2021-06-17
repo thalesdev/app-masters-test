@@ -8,7 +8,11 @@ export function generateCertificationHTML(wpm: string, time: string) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certificado</title>
-		<style>
+		<style type="text/css">
+				body{
+					background-color: #181B23;
+					color: white;
+				}
 			.kTEfvP{min-width:940px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}
 			.kTEfvP h3{font-size:48px;margin-bottom:10px;}
 			.kTEfvP h1{margin:40px 0;font-size:36px;}
@@ -19,10 +23,11 @@ export function generateCertificationHTML(wpm: string, time: string) {
 
 	</head>
 	<body>
-	<div className="styles__Container-moet9-0 kTEfvP">
-		<h3>Cerficado</h3>
+	<div class="kTEfvP">
+		<h1><span  style="color:#805AD5 !important;">Speed Typing</span></h1>
+		<h3>Cerficado Digital</h3>
 		<h1>
-			<span>${wpm} Wpm </span>médio
+			<span>${wpm} WPM </span>médio
 		</h1>
 		<h1>
 			<span>${time}s </span>médio

@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react"
 import Head from 'next/head'
 import { ImSpinner8 } from 'react-icons/im'
 
-import { Container, LoadingContainer } from './_test'
+import { Container, LoadingContainer } from '../styles/test'
 import { Challenge } from "../components/challenge";
 import { ChallengeContext } from "../context/ChallengeContex";
 import challenges from '../utils/challenges'
@@ -87,9 +87,9 @@ export default function Test() {
 				{stage === 1 && (
 					<>
 						{/* {state === 'stop' && <h2>Pausado...</h2>} */}
-						{challenges.map(({ challenge, key }) => (
+						{challenges.map(({ challenge, key, code }) => (
 							key === challengeIndex &&
-							<Challenge key={key} id={key} goal={challenge} onComplete={handleCompleteChallenge} />
+							<Challenge key={key} id={key} goal={challenge} code={code} onComplete={handleCompleteChallenge} />
 						))}
 						<footer>
 							<span>

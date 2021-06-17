@@ -22,7 +22,6 @@ export interface DefaultThemeProps {
 	};
 }
 
-// modificar as cores
 export const DefaultTheme: DefaultThemeProps = {
 	bgColor: '#181B23',
 	primaryColor: '#D53F8C',

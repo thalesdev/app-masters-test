@@ -13,7 +13,7 @@ export function Results({ times, wpms }: ResultProps) {
 
 
 	function handleDownload() {
-		window.location.assign(`/api/certification?wpm=${avgWpms}&&time=${avgTime}`);
+		window.location.assign(`/api/certification.png?wpm=${avgWpms}&&time=${avgTime}`);
 	}
 
 

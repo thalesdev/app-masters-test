@@ -1,0 +1,8 @@
+{
+	"rewrites": [
+		{
+			"source": "/api/certification.png",
+			"destination": "/api/certification"
+		}
+	]
+}
